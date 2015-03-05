@@ -1,0 +1,28 @@
+{
+  "name": "react-confine-key",
+  "version": "0.0.1",
+  "description": "Capture keyboard shortcuts for react-confine",
+  "main": "lib/key.js",
+  "scripts": {
+    "test": "mocha --compilers jsx:babel/register",
+    "prepublish": "npm run clean && npm run build",
+    "demo:build": " mkdir -p demo/build && cp demo/src/index.html demo/build && cp demo/src/style.css demo/build && browserify -t babelify demo/src/script.jsx -o demo/build/script.js",
+    "demo": "npm run demo:build && open demo/build/index.html",
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib demo/build"
+  },
+  "author": "@brandonhorst",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^4.6.6",
+    "babelify": "^5.0.3",
+    "browserify": "^9.0.3",
+    "confine": "^3.0.3",
+    "confine-key": "0.0.1",
+    "lodash": "^3.3.1",
+    "normalize-css": "^2.3.1",
+    "react": "^0.12.2",
+    "react-confine": "^0.1.0",
+    "rimraf": "^2.3.0"
+  }
+}
