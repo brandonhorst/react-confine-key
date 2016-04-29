@@ -2,7 +2,7 @@ import _ from 'lodash'
 import Confine from 'confine'
 import React from 'react'
 import {render} from 'react-dom'
-import ReactConfine from 'react-confine'
+import {ConfineView} from 'react-confine'
 import ReactConfineKey from '../..'
 
 const schema = {
@@ -45,7 +45,7 @@ class Page extends React.Component {
   render () {
     return (
       <div className='page'>
-        <ReactConfine confine={confine} schema={this.props.schema}
+        <ConfineView confine={confine} schema={this.props.schema}
           value={this.state.value} onChange={this.change.bind(this)}
           customTypes={reactTypes}/>
         <JSONView value={this.state.value} />
