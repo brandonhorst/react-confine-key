@@ -23,8 +23,6 @@ export default class ConfineKey extends React.Component {
   render () {
     // let displayString = this.props.value.string;
     // displayString = global.getKeyDisplayString(this.props.value.string, this.props.value.key)
-    console.log(SimpleWrapper)
-
     return (
       <SimpleWrapper title={this.props.title} description={this.props.description} className='key' format={this.props.format} label={this.props.label}>
         <div className='key-input' onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)} tabIndex={0}>
